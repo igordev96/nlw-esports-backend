@@ -1,9 +1,12 @@
 import express from "express";
 import cors from "cors";
+import * as dotenv from "dotenv";
 
 import { PrismaClient } from "@prisma/client";
 import { convertHourStringToMinutes } from "./utils/convert-hour-string-to-minutes";
 import { convertMinutesToHourString } from "./utils/convert-minutes-to-hour-string";
+
+dotenv.config();
 
 const app = express();
 

@@ -96,4 +96,29 @@ app.post("/games/:id/ads", async (request, response) => {
   return response.status(201).json(ad);
 });
 
+app.post("/games", async (request, response) => {
+  const body = request.body;
+
+  const game = await prisma.game.create({
+    data: {
+      bannerUrl: body.bannerUrl,
+      title: body.title,
+    },
+  });
+
+  return response.status(201).json(game);
+});
+
+app.delete("/games/:id", async (request, response) => {
+  const id = request.params.id;
+
+  await prisma.game.delete({
+    where: {
+      id,
+    },
+  });
+
+  return response.status(202).json(id);
+});
+
 app.listen(3030);

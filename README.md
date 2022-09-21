@@ -1,13 +1,13 @@
 # NLW eSports Node.JS
 
-This app was developed Express, Prisma, SQLite and TypeScript. Through this backend service we can get and post the ads for the FrontEnd application.
+This app was developed Express, Prisma, ~~SQLite~~, CockroachDB and TypeScript. Through this backend service we can get and post the ads for the FrontEnd application.
 
 ## Tech Stack
 
 - Express: Node framework to make the api easier to build
 - Prisma: It's a ORM to build our database
-- SQLite: The database itself
-
+- CockroachDB: Now using CockroachDB for a serverless database~
+- ~~SQLite: The database itself~~
 
 ## Demo
 

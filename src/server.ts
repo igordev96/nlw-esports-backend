@@ -121,4 +121,4 @@ app.delete("/games/:id", async (request, response) => {
   return response.status(202).json(id);
 });
 
-app.listen(3030);
+app.listen(process.env.PORT || 3030);
